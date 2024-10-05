@@ -9,11 +9,56 @@
   flex-wrap: wrap;
 
   overflow-x: auto;
+
+  width: fit-content;
 }
 
 /* Replaced by .scahoo-board {padding-inline: 16px;} to remove margins on sides when overflow-x scrolling */
 .scahoo-tab-content .inner {
   padding: 0;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.scahoo-board-instructions {
+  margin: 16px;
+  margin-right: 8px;
+  padding: 16px;
+
+  min-width: 208px;
+  width: 208px;
+  height: fit-content;
+
+  border-radius: 8px;
+  outline: 1px solid var(--border-primary);
+  box-shadow: 0 0 8px var(--shadow);
+
+  color: var(--text-primary);
+
+  transition: outline-width 0.3s ease-in, background-color 0.15s,
+    outline-color 0.15s, box-shadow 0.15s;
+}
+
+.scahoo-board-instructions p {
+  font-size: 10pt;
+}
+
+@media screen and (max-width: 992px) {
+  .scahoo-tab-content .inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scahoo-board-instructions {
+    width: calc(100% - 64px);
+    max-width: inherit;
+  }
+}
+
+.scahoo-board-instructions h2 {
+  padding-top: 0;
+  font-size: 18pt;
 }
 
 /* --- SCAHOO CATEGORY --- */
@@ -28,6 +73,7 @@
 .scahoo-category h3 {
   margin-top: 16px;
   margin-bottom: 8px;
+  margin-left: 16px;
 
   font-size: 18pt;
 }

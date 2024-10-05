@@ -13,7 +13,7 @@ export function addCategory(category) {
   }
   if (!category.name || category.name == "NONE") {
     categoryClone.querySelector(".scahoo-category h3").textContent =
-      "";
+      "Cards";
 
   } else if (category.name) {
     categoryClone.querySelector(".scahoo-category h3").textContent =

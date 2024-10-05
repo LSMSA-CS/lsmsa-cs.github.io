@@ -1,5 +1,53 @@
+.scahoo-tab-content .inner {
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.scahoo-leaderboard-instructions {
+  margin: 16px;
+  margin-right: 8px;
+  padding: 16px;
+
+  min-width: 208px;
+  width: 208px;
+  height: fit-content;
+
+  border-radius: 8px;
+  outline: 1px solid var(--border-primary);
+  box-shadow: 0 0 8px var(--shadow);
+
+  color: var(--text-primary);
+
+  transition: outline-width 0.3s ease-in, background-color 0.15s,
+    outline-color 0.15s, box-shadow 0.15s;
+}
+
+.scahoo-leaderboard-instructions p {
+  font-size: 10pt;
+}
+
+@media screen and (max-width: 992px) {
+  .scahoo-tab-content .inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scahoo-leaderboard-instructions {
+    width: calc(100% - 64px);
+    max-width: inherit;
+  }
+}
+
+.scahoo-leaderboard-instructions h2 {
+  padding-top: 0;
+  font-size: 18pt;
+}
+
 .scahoo-leaderboard {
   padding-bottom: 24px;
+  margin-inline: auto;
 }
 
 .scahoo-leaderboard-content {
@@ -69,7 +117,8 @@
   color: var(--text-primary);
   box-shadow: 0 0 8px var(--shadow);
 
-  transition: outline-width 0.3s ease-in, background-color 0.15s, outline-color 0.15s, box-shadow 0.15s;
+  transition: outline-width 0.3s ease-in, background-color 0.15s,
+    outline-color 0.15s, box-shadow 0.15s;
 
   display: flex;
   flex-direction: row;
