@@ -72,6 +72,10 @@ body.sticking {
   background-color: var(--background-primary);
 }
 
+.stop-transitions * {
+  transition: none !important;
+}
+
 /* --- INNER DIV CLASS --- */
 
 .inner {

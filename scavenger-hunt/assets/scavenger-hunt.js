@@ -8,16 +8,20 @@ document.querySelectorAll("#color-scheme-switcher").forEach((element) => {
 
 document.querySelectorAll("body").forEach((element) => {
   element.addEventListener("load", refreshColorScheme());
+  element.addEventListener("load", setupInfo());
+  element.addEventListener("load", enableTransitions());
 });
 
 // --- SCAHOO INFO ---
 
-if (hunt.info.title) {
-  document.querySelector(".scahoo-info-title").innerText = hunt.info.title;
-}
-if (hunt.info.description) {
-  document.querySelector(".scahoo-info-description").innerText =
-    hunt.info.description;
+function setupInfo() {
+  if (hunt.info.title) {
+    document.querySelector(".scahoo-info-title").innerText = hunt.info.title;
+  }
+  if (hunt.info.description) {
+    document.querySelector(".scahoo-info-description").innerText =
+      hunt.info.description;
+  }
 }
 
 // --- TAB BAR ---
@@ -64,3 +68,13 @@ const navObserver = new IntersectionObserver(
 );
 
 navObserver.observe(scrollWatcher);
+
+// --- ENABLE TRANSITIONS ON BODY CHILDREN ---
+
+function enableTransitions() {
+  setTimeout(() => {
+    document.querySelectorAll(".stop-transitions").forEach((element) => {
+      element.classList.remove("stop-transitions");
+    });
+  }, 10);
+}
