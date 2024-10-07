@@ -1,7 +1,25 @@
 export let hunt = {
   info: {
+    id: "hdc9fdb",
     title: "Computer Science Scavenger Hunt",
-    description: "Explore the various fields of Computer Science by completing these tasks! More cards and tasks will be added in the future.\nThe current deadline for this event is November 16, 2024. If you are a club officer, you need to submit at least one task!"
+    description:
+      "Explore the various fields of Computer Science by completing these tasks! More cards and tasks will be added in the future.\nThe current deadline for this event is November 16, 2024. If you are a club officer, you need to submit at least one task!",
+    author: {
+      id: "u000001",
+      name: "Isosc",
+      descriptor: "Senior",
+      type: "individual",
+      profileUUID: "0d19deb1-1e50-4bd5-b2b5-cd6423595bdb",
+    },
+    version: 1,
+    timeLastUpdated: 1728342000,
+    timeReleased: 1726816980,
+  },
+  tabs: {
+    board: true,
+    leaderboard: true,
+    map: false,
+    about: true,
   },
   categories: [
     {

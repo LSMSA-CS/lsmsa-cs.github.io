@@ -231,7 +231,36 @@
   background-color: var(--background-modifier-hover);
 }
 
-.scahoo-board-card-description .more-info {
+.scahoo-board-card-description *:not(.more-info) {
+  display: inline-block;
+  line-height: 1.2em;
+  height: 2.4em;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.scahoo-board-card-description *:not(.more-info)::after {
+  content: "Read more...";
+  padding-left: 4px;
+  color: var(--text-tertiary);
+
+  font-style: italic;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.scahoo-board-card-description:hover *:not(.more-info)::after {
+  text-decoration: underline;
+}
+
+/* .scahoo-board-card-description .more-info {
+  display: none;
+
   user-select: none;
 
   font-style: italic;
@@ -245,7 +274,7 @@
 
 .scahoo-board-card-description:hover .more-info {
   text-decoration: underline;
-}
+} */
 
 /* --- SCAHOO BOARD TASK --- */
 

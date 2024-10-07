@@ -1,5 +1,13 @@
 import { hunt } from "./data/hunt.js";
 
+const idPrefixes = {
+  h: "hunt",
+  u: "user",
+  g: "category",
+  c: "card",
+  t: "task",
+}
+
 // --- COLOR SCHEME ---
 
 document.querySelectorAll("#color-scheme-switcher").forEach((element) => {
