@@ -3,20 +3,20 @@
   --footer-text-color: black;
 
   --thm-l-accent: #022d62;
-  --thm-l-background-primary: #d4dae2;
-  --thm-l-background-secondary: #e7e9ec;
-  --thm-l-background-tertiary: #fff;
-  --thm-l-background-primary-hover: #cfd7df;
-  --thm-l-background-secondary-hover: #d3d7d9;
-  --thm-l-background-tertiary-hover: #efefef;
-  --thm-l-background-modifier-hover: #bbbbbb80;
-  --thm-l-border-primary: #bbb;
-  --thm-l-border-secondary: #ddd;
+  --thm-l-background-primary: #fff;
+  --thm-l-background-secondary: #f6f7f8;
+  --thm-l-background-tertiary: #e8eaeb;
+  --thm-l-background-primary-hover: #efefef;
+  --thm-l-background-secondary-hover: #dedddf;
+  --thm-l-background-tertiary-hover: #d4d6d8;
+  --thm-l-background-modifier-hover: #cccccc80;
+  --thm-l-border-primary: #ccc;
+  --thm-l-border-secondary: #aaa;
   --thm-l-text-primary: #444;
   --thm-l-text-secondary: #666;
-  --thm-l-text-tertiary: #bbb;
+  --thm-l-text-tertiary: #aaa;
   --thm-l-modal-backdrop: #444444a0;
-  --thm-l-shadow: rgba(128, 128, 128, 0.5);
+  --thm-l-shadow: rgba(192, 192, 192, 0.5);
 
   --thm-d-accent: #3c7bc7;
   --thm-d-background-primary: #1d1d1d;

@@ -64,7 +64,7 @@ details > summary::-webkit-details-marker {
 }
 
 body {
-  background-color: var(--background-secondary);
+  background-color: var(--background-tertiary);
   transition: background-color 0.15s;
 }
 
@@ -136,12 +136,17 @@ a:hover {
 
 #main-navbar {
   z-index: 5;
+  position: relative;
 
-  background-color: var(--background-secondary);
+  background-color: var(--background-tertiary);
   outline: 1px solid var(--border-primary);
-  box-shadow: 0 0 8px var(--shadow);
+  box-shadow: 0 0 0 var(--shadow);
+  
+  transition: background-color 0.15s, outline 0.15s, box-shadow 0.15s;
+}
 
-  transition: background-color 0.15s;
+#main-navbar:hover {
+  box-shadow: 0 0 8px var(--shadow)
 }
 
 #main-navbar .inner {
@@ -161,7 +166,7 @@ a:hover {
   text-decoration: none;
 
   color: inherit;
-  background-color: var(--background-secondary-hover);
+  background-color: var(--background-tertiary-hover);
 }
 
 /* --- COLOR SCHEME SWITCHER --- */
@@ -178,7 +183,7 @@ a:hover {
   border-radius: 50%;
 
   color: var(--text-primary);
-  background-color: var(--background-secondary);
+  background-color: var(--background-tertiary);
 
   transition: background-color 0.15s;
 }
@@ -207,7 +212,7 @@ a:hover {
 }
 
 #color-scheme-switcher:hover {
-  background-color: var(--background-secondary-hover);
+  background-color: var(--background-tertiary-hover);
 }
 
 /* --- NAVBAR LOGO --- */
@@ -237,7 +242,7 @@ a:hover {
 .scahoo-info {
   padding-bottom: 24px;
 
-  background-color: var(--background-secondary);
+  background-color: var(--background-tertiary);
 
   transition: background-color 0.15s;
 }
@@ -256,7 +261,7 @@ a:hover {
 .scahoo-tabs {
   min-height: 32px;
 
-  background-color: var(--background-secondary);
+  background-color: var(--background-tertiary);
 
   transition: background-color 0.15s;
 }
@@ -319,7 +324,7 @@ a.scahoo-tab {
 a.scahoo-tab:hover:not(.disabled):not(.selected) {
   border-top: 2px solid var(--text-tertiary);
 
-  background-color: var(--background-secondary-hover);
+  background-color: var(--background-tertiary-hover);
 }
 
 a.scahoo-tab.selected {
@@ -344,7 +349,7 @@ a.scahoo-tab.disabled {
 }
 
 a.scahoo-tab.disabled:hover {
-  /* background-color: var(--background-secondary-hover); */
+  /* background-color: var(--background-tertiary-hover); */
   cursor: not-allowed;
 }
 
