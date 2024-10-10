@@ -446,7 +446,7 @@ a.scahoo-tab.disabled:hover {
   overflow: clip;
 
   margin: 16px;
-  margin-left: 8px;
+  margin-left: auto;
   padding: 16px;
 
   min-width: 208px;
@@ -564,6 +564,8 @@ input[type="checkbox"].scahoo-instructions-checkbox {
   height: 32px;
 
   border-radius: 50%;
+
+  cursor: pointer;
 }
 
 .scahoo-instructions-icon svg {
