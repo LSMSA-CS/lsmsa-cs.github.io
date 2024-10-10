@@ -27,11 +27,28 @@
 
 /* Allows users to select this div and take a screenshot of the leaderboard */
 .scahoo-leaderboard-frame {
-  /* width: calc(512px + 32px); */
-  max-width: 100%;
+  width: 100%;
+  max-width: 512px;
 
   margin: 24px 0;
   padding-top: 16px;
+}
+
+@media screen and (max-width: calc(512px + 80px + 86px)) {
+  .scahoo-tab-content .inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scahoo-instructions {
+    position: relative !important;
+    right: 8px;
+    margin-left: auto;
+  }
+
+  .scahoo-leaderboard-frame {
+    padding-top: 0;
+  }
 }
 
 .scahoo-leaderboard-frame h3 {
@@ -42,6 +59,7 @@
 
   font-size: 18pt;
   text-align: center;
+  overflow-wrap: break-word;
 }
 
 .scahoo-leaderboard-frame h4 {

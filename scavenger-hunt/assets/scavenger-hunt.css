@@ -458,6 +458,7 @@ a.scahoo-tab.disabled:hover {
   top: 8px;
   right: 8px;
 
+  background-color: var(--background-primary);
   border-radius: 8px;
   outline: 1px solid var(--border-primary);
   box-shadow: 0 0 8px var(--shadow);
