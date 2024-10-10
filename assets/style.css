@@ -1,6 +1,7 @@
 :root {
   --footer-bg-color: white;
   --footer-text-color: black;
+  --footer-hover-color: var(--footer-text-color);
 
   --thm-l-accent: #022d62;
   --thm-l-background-primary: #fff;
@@ -75,8 +76,6 @@ footer {
   background-color: var(--footer-bg-color);
 }
 
-/* --- */
-
 #footer-content {
   display: flex;
   align-items: center;
@@ -100,14 +99,15 @@ footer hr {
   width: 24px;
 
   border: solid var(--footer-text-color) 0.7px;
-  border: solid var(--footer-text-color) 0.7px;
   opacity: 0.6;
 
   margin-bottom: 12px;
-  transition: width 0.2s;
+  transition: width 0.2s, border-color 0.2s;
 }
 
 footer:hover hr {
+  border-color: var(--footer-hover-color);
+
   width: 192px;
   transition: width 0.2s;
 }
@@ -120,13 +120,11 @@ footer a:link {
   text-decoration-thickness: 1.5px;
 
   color: var(--footer-text-color);
-  color: var(--footer-text-color);
   background-color: none;
   transition: background-color 0.2s, color 0.2s;
 }
 
 footer a:visited {
-  color: var(--footer-text-color);
   color: var(--footer-text-color);
 }
 
@@ -135,7 +133,20 @@ footer a:hover {
 
   color: var(--footer-bg-color);
   background-color: var(--footer-text-color);
-  color: var(--footer-bg-color);
-  background-color: var(--footer-text-color);
   transition: background-color 0.2s, color 0.2s;
+}
+
+/* --- */
+
+footer:hover a:link {
+  color: var(--footer-hover-color);
+}
+
+footer:hover a:visited {
+  color: var(--footer-hover-color);
+}
+
+footer:hover a:hover {
+  color: var(--footer-bg-color);
+  background-color: var(--footer-hover-color);
 }

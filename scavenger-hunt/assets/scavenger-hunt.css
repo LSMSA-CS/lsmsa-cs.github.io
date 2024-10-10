@@ -2,7 +2,8 @@
   --accent: var(--thm-d-accent);
 
   --footer-bg-color: var(--background-primary);
-  --footer-text-color: var(--text-primary);
+  --footer-text-color: var(--text-secondary);
+  --footer-hover-color: var(--text-primary);
 
   font-family: Inter, sans-serif;
   font-feature-settings: "liga" 1, "calt" 1;
@@ -240,7 +241,7 @@ a:hover {
 /* --- SCAHOO INFO --- */
 
 .scahoo-info {
-  padding-bottom: 12px;
+  padding-bottom: 16px;
 
   background-color: var(--background-tertiary);
 
@@ -269,6 +270,8 @@ a:hover {
   text-overflow: clip;
 
   font-size: 10pt;
+  line-height: 1.4em;
+  height: 2.4em;
 
   display: -webkit-box;
   line-clamp: 2;
