@@ -36,13 +36,13 @@ const tabDefinitions = {
 const tabTemplate = document.querySelector("template.tem-scahoo-tab");
 
 let currentTab;
-    try {
-      currentTab = document
-        .querySelector("#scahoo-current-tab")
-        .getAttribute("content");
-    } catch (TypeError) {
-      currentTab = "board";
-    }
+try {
+  currentTab = document
+    .querySelector("#scahoo-current-tab")
+    .getAttribute("content");
+} catch (TypeError) {
+  currentTab = "board";
+}
 
 // --- COLOR SCHEME ---
 
@@ -70,7 +70,9 @@ function setupInfo() {
   if (hunt.tabs) {
     // If about tab is enabled and not currently on about tab
     if (hunt.tabs["about"] == true && currentTab != "about") {
-      document.querySelector(".scahoo-info-description").setAttribute("href", "../about/");
+      document
+        .querySelector(".scahoo-info-description")
+        .setAttribute("href", "../about/");
     }
   }
 }
@@ -80,7 +82,6 @@ function setupInfo() {
 function setupTabs() {
   if (hunt.tabs) {
     if (hunt.tabs[currentTab] == false) {
-      
       for (let i of tabOrder) {
         if (hunt.tabs[i] == true) {
           // Redirect to first enabled tab
@@ -95,7 +96,6 @@ function setupTabs() {
       if (tabDefinitions[i] == undefined) {
         continue;
       }
-
 
       if (hunt.tabs[i]) {
         let tabClone = tabTemplate.content.firstElementChild.cloneNode(true);
@@ -187,3 +187,34 @@ function enableTransitions() {
     });
   }, 10);
 }
+
+// --- OPEN/CLOSE INSTRUCTIONS PANEL ---
+
+let instructionsPanelClosed;
+instructionsPanelClosed = window.localStorage.getItem(
+  "instructionsPanelClosed"
+);
+try {
+  instructionsPanelClosed = JSON.parse(instructionsPanelClosed);
+} catch (SyntaxError) {
+  instructionsPanelClosed = {
+    board: false,
+    leaderboard: false,
+    map: false,
+  };
+}
+
+// Update checkbox on load
+document.querySelector(".scahoo-instructions-checkbox").checked =
+  !instructionsPanelClosed[currentTab];
+
+// Store checkbox when changed
+document
+  .querySelector("input[type=checkbox].scahoo-instructions-checkbox")
+  .addEventListener("change", function () {
+    instructionsPanelClosed[currentTab] = !this.checked;
+    window.localStorage.setItem(
+      "instructionsPanelClosed",
+      JSON.stringify(instructionsPanelClosed)
+    );
+  });
