@@ -18,8 +18,8 @@ export let hunt = {
   },
   tabs: {
     board: true,
-    leaderboard: true,
     map: false,
+    leaderboard: true,
     about: true,
   },
   categories: [

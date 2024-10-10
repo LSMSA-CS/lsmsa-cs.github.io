@@ -8,21 +8,23 @@ const idPrefixes = {
   t: "task",
 };
 
+const tabOrder = ["board", "map", "leaderboard", "about"];
+
 const tabDefinitions = {
   board: {
     name: "Board",
     icon: "layout-grid",
     href: "/scavenger-hunt/board",
   },
-  leaderboard: {
-    name: "Leaderboard",
-    icon: "trophy",
-    href: "/scavenger-hunt/leaderboard/",
-  },
   map: {
     name: "Map",
     icon: "map",
     href: "/scavenger-hunt/map/",
+  },
+  leaderboard: {
+    name: "Leaderboard",
+    icon: "trophy",
+    href: "/scavenger-hunt/leaderboard/",
   },
   about: {
     name: "About",
@@ -72,15 +74,17 @@ function setupTabs() {
     }
 
     if (hunt.tabs[currentTab] == false) {
-      for (let i in hunt.tabs) {
+      
+      for (let i of tabOrder) {
         if (hunt.tabs[i] == true) {
           // Redirect to first enabled tab
           window.location.replace(tabDefinitions[i].href);
+          break;
         }
       }
     }
 
-    for (let i in hunt.tabs) {
+    for (let i of tabOrder) {
       // If hunt.tabs has invalid tab, it is skipped
       if (tabDefinitions[i] == undefined) {
         continue;

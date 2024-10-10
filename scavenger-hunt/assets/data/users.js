@@ -1,7 +1,7 @@
 export let users = [
   {
     name: "Joshua Cleveland",
-    descriptor: "Junior",
+    descriptor: "Senior",
     type: "individual",
     rank: 1,
     points: 105
