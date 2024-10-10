@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="0; url=board/">
 
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="assets/scavenger-hunt.css">
@@ -14,10 +15,45 @@
   <script>
     refreshColorScheme();
   </script>
+
+  <script src="assets/data/hunt.js" type="module"></script>
 </head>
 
 <body>
-  <script>
+  <script type="module">
+    // import { hunt } from "./assets/data/hunt.js";
+
+    // const tabDefinitions = {
+    //   board: {
+    //     name: "Board",
+    //     icon: "layout-grid",
+    //     href: "/scavenger-hunt/board",
+    //   },
+    //   leaderboard: {
+    //     name: "Leaderboard",
+    //     icon: "trophy",
+    //     href: "/scavenger-hunt/leaderboard/",
+    //   },
+    //   map: {
+    //     name: "Map",
+    //     icon: "map",
+    //     href: "/scavenger-hunt/map/",
+    //   },
+    //   about: {
+    //     name: "About",
+    //     icon: "info",
+    //     href: "/scavenger-hunt/about/",
+    //     disabled: true,
+    //   },
+    // };
+
+    // for (let i in hunt.tabs) {
+    //   if (hunt.tabs[i] == true) {
+    //     // Redirect to first enabled tab
+    //     window.location.replace(tabDefinitions[i].href);
+    //   }
+    // }
+    
     window.location.replace("/scavenger-hunt/board");
   </script>
 </body>

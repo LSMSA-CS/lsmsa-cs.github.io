@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="../assets/scavenger-hunt.css" />
   <link rel="stylesheet" href="../assets/leaderboard.css" />
+  <meta id="scahoo-current-tab" content="leaderboard">
 
   <link class="color-scheme" id="color-scheme-light" rel="stylesheet" href="../assets/color-schemes/light.css" disabled>
   <link class="color-scheme" id="color-scheme-dark" rel="stylesheet" href="../assets/color-schemes/dark.css">
@@ -53,18 +54,18 @@
     </div>
     <div class="scahoo-tabs">
       <div class="inner">
-        <a href="/scavenger-hunt/board/" class="scahoo-tab">
+        <!-- <a href="/scavenger-hunt/board/" class="scahoo-tab">
           <div class="scahoo-tab-icon">
             <i data-lucide="layout-grid"></i>
           </div>
           <span class="scahoo-tab-name">Board</span>
         </a>
-        <!-- <a href="/scavenger-hunt/map/" class="scahoo-tab">
+        <a href="/scavenger-hunt/map/" class="scahoo-tab">
           <div class="scahoo-tab-icon">
             <i data-lucide="map"></i>
           </div>
           <span class="scahoo-tab-name">Map</span>
-        </a> -->
+        </a>
         <a href="#content" class="scahoo-tab selected">
           <div class="scahoo-tab-icon">
             <i data-lucide="trophy"></i>
@@ -76,7 +77,7 @@
             <i data-lucide="info"></i>
           </div>
           <span class="scahoo-tab-name">About (WIP)</span>
-        </a>
+        </a> -->
       </div>
     </div>
     <div id="content" class="scahoo-tab-content">
@@ -112,6 +113,15 @@
       <a href="https://github.com/LSMSA-CS/lsmsa-cs.github.io/">Repository</a>
     </div>
   </footer>
+
+  <template class="tem-scahoo-tab">
+    <a class="scahoo-tab">
+      <div class="scahoo-tab-icon">
+        <i data-lucide="circle-help"></i>
+      </div>
+      <span class="scahoo-tab-name">Tab</span>
+    </a>
+  </template>
 
   <template class="tem-scahoo-leaderboard-item">
     <div class="scahoo-leaderboard-item">

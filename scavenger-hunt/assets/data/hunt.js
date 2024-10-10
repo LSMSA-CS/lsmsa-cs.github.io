@@ -14,6 +14,7 @@ export let hunt = {
     version: 1,
     timeLastUpdated: 1728342000,
     timeReleased: 1726816980,
+    timeDue: 1731823199,
   },
   tabs: {
     board: true,
