@@ -455,6 +455,9 @@ a.scahoo-tab.disabled:hover {
   max-width: fit-content;
   height: fit-content;
 
+  top: 8px;
+  right: 8px;
+
   border-radius: 8px;
   outline: 1px solid var(--border-primary);
   box-shadow: 0 0 8px var(--shadow);
@@ -466,24 +469,18 @@ a.scahoo-tab.disabled:hover {
   /* outline-color 0.15s, box-shadow 0.15s, height 0.5s ease-in-out; */
 }
 
-.scahoo-instructions p {
-  font-size: 10pt;
-}
-
 @media screen and (max-width: 992px) {
   .scahoo-instructions {
     order: 0;
 
     margin: 16px;
 
-    width: calc(100% - 64px);
+    top: 8px;
+    right: -8px;
+
+    width: calc(100% - 80px);
     max-width: inherit;
   }
-}
-
-.scahoo-instructions h2 {
-  padding-top: 0;
-  font-size: 18pt;
 }
 
 .scahoo-instructions:has(
@@ -498,10 +495,13 @@ a.scahoo-tab.disabled:hover {
   padding: 4px;
 
   position: absolute;
-  top: 8;
-  right: 0;
+  top: 8px;
+  right: 8px;
 
   box-shadow: none;
+
+  transition: outline-width 0.3s ease-in, background-color 0.15s,
+    outline-color 0.15s, box-shadow 0.15s;
 }
 
 .scahoo-instructions:has(
@@ -516,6 +516,19 @@ a.scahoo-tab.disabled:hover {
   ) {
   box-shadow: 0 0 8px var(--shadow);
   background-color: var(--background-primary-hover);
+}
+
+/* --- SCAHOO INSTRUCTIONSN CONTENT --- */
+
+.scahoo-instructions h2 {
+  padding-top: 0;
+
+  font-size: 18pt;
+}
+
+.scahoo-instructions p {
+  font-size: 10pt;
+  margin-left: 4px;
 }
 
 /* --- SCAHOO INSTRUCTIONS BUTTON --- */
