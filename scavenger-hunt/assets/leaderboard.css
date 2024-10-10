@@ -48,6 +48,8 @@
 .scahoo-leaderboard {
   padding-bottom: 24px;
   margin-inline: auto;
+
+  width: 100%; /* For .scahoo-leaderboard-list {overflow-x: auto} */
 }
 
 .scahoo-leaderboard-content {
@@ -58,7 +60,7 @@
 
 /* Allows users to select this div and take a screenshot of the leaderboard */
 .scahoo-leaderboard-frame {
-  width: calc(512px + 32px);
+  /* width: calc(512px + 32px); */
   max-width: 100%;
 
   margin: 24px 0;

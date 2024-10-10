@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="/assets/style.css" />
 
   <link rel="stylesheet" href="../assets/scavenger-hunt.css" />
-  <link rel="stylesheet" href="../assets/leaderboard.css" />
-  <meta id="scahoo-current-tab" content="leaderboard">
+  <link rel="stylesheet" href="../assets/about.css" />
+  <meta id="scahoo-current-tab" content="about">
 
   <link class="color-scheme" id="color-scheme-light" rel="stylesheet" href="../assets/color-schemes/light.css" disabled>
   <link class="color-scheme" id="color-scheme-dark" rel="stylesheet" href="../assets/color-schemes/dark.css">
@@ -60,21 +60,63 @@
     <div id="content" class="scahoo-tab-content">
       <!-- ID is for URL anchor of #content -->
       <div class="inner">
-        <div class="scahoo-leaderboard-instructions">
-          <h2>Instructions</h2>
-          <p>
-            Earn points by completing cards and tasks on the
-            <a href="../board/">board</a>.
-          </p>
-        </div>
-        <div class="scahoo-leaderboard">
-          <!-- <h1 style="margin-top: 36px; text-align: center;">Work in progress! Check back later.</h1> -->
+        <div class="scahoo-about-grid">
+          <div id="scahoo-agi-description" class="scahoo-about-item scahoo-grid-clear">
+            <h2>Description</h2>
+            <p class="scahoo-about-description-text">No description provided</p>
+          </div>
+          <div id="scahoo-agi-panes">
+            <div id="scahoo-about-author" class="scahoo-about-item">
+              <h2>Author</h2>
+              <div class="scahoo-about-author-content scahoo-about-item-content">
+                <div class="scahoo-about-author-item">
+                  <div class="scahoo-about-author-icon">
+                    <i data-lucide="circle-user-round"></i>
+                  </div>
+                  <div class="scahoo-about-author-text">
+                    <div class="scahoo-about-author-name">
+                      No name
+                    </div>
+                    <div class="scahoo-about-author-descriptor">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="scahoo-about-details" class="scahoo-about-item">
+              <h2>Details</h2>
+              <div class="scahoo-about-item-content">
 
-          <div class="scahoo-leaderboard-content">
-            <div class="scahoo-leaderboard-frame">
-              <h3 class="scahoo-leaderboard-title"></h3>
-              <h4>Leaderboard</h4>
-              <div class="scahoo-leaderboard-list">
+                <table>
+                  <tbody>
+                    <tr id="scahoo-about-details-timeDue">
+                      <td><i data-lucide="calendar-clock"></i></td>
+                      <td>Due</td>
+                      <td>N/A</td>
+                    </tr>
+                    <tr id="scahoo-about-details-timeLastUpdated">
+                      <td><i data-lucide="calendar-cog"></i></td>
+                      <td>Last updated</td>
+                      <td>N/A</td>
+                    </tr>
+                    <tr id="scahoo-about-details-timeReleased">
+                      <td><i data-lucide="calendar-heart"></i></td>
+                      <td>Released</td>
+                      <td>N/A</td>
+                    </tr>
+                    <tr id="scahoo-about-details-version">
+                      <td><i data-lucide="history"></i></td>
+                      <td>Version</td>
+                      <td>Private (N/A)</td>
+                    </tr>
+                    <tr id="scahoo-about-details-id">
+                      <td><i data-lucide="id-card"></i></td>
+                      <td>ID</td>
+                      <td>N/A</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -100,31 +142,8 @@
     </a>
   </template>
 
-  <template class="tem-scahoo-leaderboard-item">
-    <div class="scahoo-leaderboard-item">
-      <div class="scahoo-leaderboard-item-rank">
-        <span>
-          -
-        </span>
-      </div>
-      <div class="scahoo-leaderboard-item-content">
-        <div class="scahoo-leaderboard-item-name">
-          No name
-        </div>
-        <div class="scahoo-leaderboard-item-descriptor">
-
-        </div>
-      </div>
-      <div class="scahoo-leaderboard-item-points">
-        <span>
-          0 pts
-        </span>
-      </div>
-    </div>
-  </template>
-
   <script src="../assets/scavenger-hunt.js" async defer type="module"></script>
-  <script src="../assets/leaderboard.js" async defer type="module"></script>
+  <script src="../assets/about.js" async defer type="module"></script>
   <script>
     lucide.createIcons();
   </script>

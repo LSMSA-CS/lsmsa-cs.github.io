@@ -1,3 +1,4 @@
+import { hunt } from "./data/hunt.js";
 import { users, usersTest } from "./data/users.js";
 
 let usersList = users;
@@ -9,6 +10,10 @@ const leaderboardList = document.querySelector(".scahoo-leaderboard-list");
 const leaderboardItemTemplate = document.querySelector(
   "template.tem-scahoo-leaderboard-item"
 );
+
+if (hunt.info.title) {
+  document.querySelector(".scahoo-leaderboard-title").innerText = hunt.info.title;
+}
 
 export function addLeaderboardItem(item) {
   let leaderboardItemClone =

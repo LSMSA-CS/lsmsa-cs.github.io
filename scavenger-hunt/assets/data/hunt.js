@@ -11,7 +11,7 @@ export let hunt = {
       type: "individual",
       profileUUID: "0d19deb1-1e50-4bd5-b2b5-cd6423595bdb",
     },
-    version: 1,
+    version: 1.1,
     timeLastUpdated: 1728342000,
     timeReleased: 1726816980,
     timeDue: 1731823199,

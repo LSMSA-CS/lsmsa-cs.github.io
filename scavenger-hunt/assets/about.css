@@ -1,0 +1,220 @@
+.scahoo-tab-content .inner {
+  padding: 0;
+}
+
+/* --- CONTENT LAYOUT --- */
+
+.scahoo-about-grid {
+  display: grid;
+  grid-template-areas:
+    "description panes"
+    "dummy panes";
+  /* grid-template-columns: 1fr 272px; */
+  grid-template-columns: 1fr 384px;
+
+  padding: 16px;
+  gap: 16px;
+}
+
+#scahoo-agi-description {
+  grid-area: description;
+}
+
+#scahoo-agi-panes {
+  grid-area: panes;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media screen and (max-width: 992px) {
+  .scahoo-about-grid {
+    grid-template-areas:
+      "panes"
+      "description";
+    grid-template-columns: 1fr;
+
+    padding: 0;
+    gap: 0;
+  }
+
+  .scahoo-about-item-content {
+    overflow: hidden;
+    height: 148px;
+    overflow-y: auto;
+  }
+
+  #scahoo-agi-panes {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 16px;
+  }
+
+  #scahoo-agi-description {
+    margin: 16px;
+    margin-top: 0;
+  }
+
+  #scahoo-about-details {
+    order: 1;
+  }
+  #scahoo-about-author {
+    order: 2;
+  }
+}
+
+/* --- DESCRIPTION ITEM --- */
+
+.scahoo-about-description-text {
+  font-size: 10pt;
+}
+
+
+/* --- ABOUT ITEM --- */
+
+.scahoo-about-item {
+  padding: 16px;
+
+  /* height: fit-content; */
+
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+  outline: 1px solid var(--border-primary);
+  box-shadow: 0 0 8px var(--shadow);
+
+  color: var(--text-primary);
+
+  transition: background-color 0.15s, outline 0.15s, box-shadow 0.15s;
+}
+
+.scahoo-about-item h2 {
+  padding-top: 0;
+
+  font-size: 18pt;
+}
+
+.scahoo-grid-clear {
+  background-color: initial;
+}
+
+.scahoo-grid-plain {
+  background-color: initial;
+  border-radius: 0;
+  outline: initial;
+  box-shadow: initial;
+}
+
+/* --- DETAILS PANE --- */
+
+#scahoo-about-details {
+  min-width: 288px;
+}
+
+#scahoo-about-details table tbody tr {
+  height: 24px;
+}
+
+#scahoo-about-details table tbody tr td:nth-child(1) {
+  color: var(--text-secondary);
+
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#scahoo-about-details table tbody tr td:nth-child(1) svg {
+  width: 16px;
+  height: 16px;
+}
+
+#scahoo-about-details table tbody tr td:nth-child(2) {
+  padding-left: 4px;
+  padding-right: 12px;
+
+  min-width: max-content;
+
+  color: var(--text-secondary);
+
+  font-size: 10pt;
+}
+
+#scahoo-about-details table tbody tr td:nth-child(3) {
+  color: var(--text-primary);
+
+  font-size: 10pt;
+}
+
+/* --- AUTHOR PANE --- */
+
+#scahoo-about-author {
+  min-width: 192px;
+  max-width: 384px;
+}
+
+.scahoo-about-author-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.scahoo-about-author-item {
+  display: flex;
+  flex-direction: row;
+
+  padding: 8px;
+
+  min-height: 40px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: background-color 0.15s;
+}
+
+.scahoo-about-author-item:hover {
+  background-color: var(--background-secondary-hover);
+}
+
+.scahoo-about-author-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scahoo-about-author-icon > * {
+  width: 40px;
+  height: 40px;
+
+  stroke-width: calc(24px / 40 * 2);
+}
+
+.scahoo-about-author-text {
+  min-height: 44px;
+
+  box-sizing: border-box;
+  padding-left: 8px;
+
+  flex-grow: 1;
+
+  overflow-wrap: anywhere;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scahoo-about-author-name {
+  font-size: 16pt;
+  color: var(--text-primary);
+}
+
+.scahoo-about-author-descriptor {
+  font-size: 10pt;
+  color: var(--text-secondary);
+}

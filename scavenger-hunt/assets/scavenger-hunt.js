@@ -30,10 +30,19 @@ const tabDefinitions = {
     name: "About",
     icon: "info",
     href: "/scavenger-hunt/about/",
-    disabled: true,
+    // disabled: true,
   },
 };
 const tabTemplate = document.querySelector("template.tem-scahoo-tab");
+
+let currentTab;
+    try {
+      currentTab = document
+        .querySelector("#scahoo-current-tab")
+        .getAttribute("content");
+    } catch (TypeError) {
+      currentTab = "board";
+    }
 
 // --- COLOR SCHEME ---
 
@@ -55,8 +64,14 @@ function setupInfo() {
     document.querySelector(".scahoo-info-title").innerText = hunt.info.title;
   }
   if (hunt.info.description) {
-    document.querySelector(".scahoo-info-description").innerText =
+    document.querySelector(".scahoo-info-description p").innerText =
       hunt.info.description;
+  }
+  if (hunt.tabs) {
+    // If about tab is enabled and not currently on about tab
+    if (hunt.tabs["about"] == true && currentTab != "about") {
+      document.querySelector(".scahoo-info-description").setAttribute("href", "../about/");
+    }
   }
 }
 
@@ -64,15 +79,6 @@ function setupInfo() {
 
 function setupTabs() {
   if (hunt.tabs) {
-    let currentTab;
-    try {
-      currentTab = document
-        .querySelector("#scahoo-current-tab")
-        .getAttribute("content");
-    } catch (TypeError) {
-      currentTab = "board";
-    }
-
     if (hunt.tabs[currentTab] == false) {
       
       for (let i of tabOrder) {
