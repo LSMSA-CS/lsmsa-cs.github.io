@@ -254,7 +254,7 @@ a:hover {
 }
 
 .scahoo-info-description {
-  padding: 4px;
+  padding: 8px;
   padding-left: 12px;
   display: block;
 
@@ -266,12 +266,14 @@ a:hover {
 }
 
 .scahoo-info-description p {
+  padding: 0;
+
   overflow: hidden;
   text-overflow: clip;
 
   font-size: 10pt;
   line-height: 1.4em;
-  height: 2.4em;
+  height: fit-content;
 
   display: -webkit-box;
   line-clamp: 2;
