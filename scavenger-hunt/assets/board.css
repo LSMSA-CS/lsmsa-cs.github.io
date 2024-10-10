@@ -258,24 +258,6 @@
   text-decoration: underline;
 }
 
-/* .scahoo-board-card-description .more-info {
-  display: none;
-
-  user-select: none;
-
-  font-style: italic;
-  font-weight: 500;
-  white-space: nowrap;
-
-  color: var(--accent);
-
-  transition: text-decoration 0.15s;
-}
-
-.scahoo-board-card-description:hover .more-info {
-  text-decoration: underline;
-} */
-
 /* --- SCAHOO BOARD TASK --- */
 
 .scahoo-board-task {

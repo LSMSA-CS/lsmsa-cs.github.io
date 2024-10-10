@@ -190,18 +190,23 @@ function enableTransitions() {
 
 // --- OPEN/CLOSE INSTRUCTIONS PANEL ---
 
+const defaultInstructionsPanelClosed = {
+  board: false,
+  leaderboard: false,
+  map: false,
+};
+
 let instructionsPanelClosed;
 instructionsPanelClosed = window.localStorage.getItem(
   "instructionsPanelClosed"
 );
+if (!instructionsPanelClosed) {
+  instructionsPanelClosed = defaultInstructionsPanelClosed;
+}
 try {
   instructionsPanelClosed = JSON.parse(instructionsPanelClosed);
 } catch (SyntaxError) {
-  instructionsPanelClosed = {
-    board: false,
-    leaderboard: false,
-    map: false,
-  };
+  instructionsPanelClosed = defaultInstructionsPanelClosed;
 }
 
 // Update checkbox on load
