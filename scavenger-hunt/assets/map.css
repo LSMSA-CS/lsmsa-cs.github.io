@@ -1,14 +1,7 @@
-.scahoo-map {
-  padding-bottom: 24px;
-  padding-inline: 16px;
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-  overflow-x: auto;
-
-  width: fit-content;
+:root {
+  --scrollPosition: 0;
+  --scahooMapContentHeight: 256px;
+  --scahooMapContentTop: 0px;
 }
 
 /* Replaced by .scahoo-map {padding-inline: 16px;} to remove margins on sides when overflow-x scrolling */
@@ -24,4 +17,111 @@
     display: flex;
     flex-direction: column;
   }
+}
+
+.scahoo-map {
+  padding-bottom: 24px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  overflow-x: auto;
+
+  width: 100%;
+}
+
+.scahoo-map-content {
+  margin: 24px;
+
+  background-color: var(--background-primary);
+  border-radius: 8px;
+  outline: 1px solid var(--border-primary);
+  box-shadow: 0 0 8px var(--shadow);
+
+  height: var(--scahooMapContentHeight);
+  margin-top: calc(var(--scahooMapContentTop) + 24px);
+
+  overflow: hidden;
+}
+
+#scahoo-leaflet-map {
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--background-primary);
+}
+
+.leaflet-bar a {
+  color: var(--text-primary) !important;
+  background-color: var(--background-secondary) !important;
+  border-bottom-color: var(--background-tertiary-hover) !important;
+}
+
+a.leaflet-disabled {
+  color: var(--text-tertiary) !important;
+}
+
+.leaflet-touch .leaflet-bar {
+  border: none !important;
+  box-shadow: 0 0 8px var(--shadow) !important;
+}
+
+.leaflet-control {
+  background-color: var(--background-secondary) !important;
+  border-top-left-radius: 2px;
+  box-shadow: 0 0 8px var(--shadow) !important;
+}
+
+.leaflet-control *,
+.leaflet-control a,
+.leaflet-control a:link,
+.leaflet-control a:visited {
+  color: var(--text-secondary) !important;
+  background-color: initial !important;
+  text-decoration: none !important;
+}
+
+/* --- SCAHOO INSTRUCTIONS BUTTON FIX */
+
+.scahoo-tab-content .inner {
+  display: flex;
+  flex-direction: row;
+}
+
+.scahoo-instructions {
+  position: relative !important;
+  right: 8px;
+  margin-left: auto;
+}
+
+@media screen and (max-width: calc(992px)) {
+  .scahoo-instructions {
+    order: 1;
+  }
+}
+
+@media screen and (max-width: calc(992px)) {
+  .scahoo-tab-content
+    .inner:has(input[type="checkbox"].scahoo-instructions-checkbox:checked) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scahoo-instructions:has(
+      input[type="checkbox"].scahoo-instructions-checkbox:checked
+    ) {
+    order: 0;
+
+    position: relative !important;
+    right: 8px;
+    margin-left: auto;
+  }
+}
+
+/* --- LEAFLET INTERACTIVE --- */
+
+/* won't work, needs JS to edit HTML attributes */
+.leaflet-interactive:hover {
+  /* background-color: red; */
 }
