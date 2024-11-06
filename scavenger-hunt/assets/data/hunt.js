@@ -321,6 +321,94 @@ export let hunt = {
           ],
         },
         {
+          id: "c5f1029",
+          name: "Sea of C++",
+          description: "Use the C++ programming language to make some advanced scripts.",
+          icon: "code",
+          skills: ["Coding"],
+          tasks: [
+            {
+              id: "t378fba",
+              name: "Hello World!",
+              description:
+                'Using the C++ programming language, write a Hello World program. If you\'re on a school laptop, install Dev-C++ from the Company Portal app',
+              resources: [
+                {
+                  title:
+                    "C++ \"Hello, World!\" Program",
+                  description: "You can just copy the steps from the video",
+                  href: "https://www.programiz.com/cpp-programming/examples/print-sentence",
+                },
+                {
+                  title: 'What is a "Hello World!" program?',
+                  description: "What's with the goofy name?",
+                  href: "https://press.rebus.community/programmingfundamentals/chapter/hello-world/",
+                },
+              ],
+              points: 5,
+              group: {
+                discriminator: "level",
+                value: "1",
+              },
+              submission: {
+                title: "How to submit",
+                type: "manual",
+                description:
+                  'Please email your submission to Isaac Young at <a href="mailto:young9191@student.lsmsa.edu">young9191@student.lsmsa.edu</a>',
+              },
+            },
+            {
+              id: "t319abc",
+              name: "Even or odd?",
+              description:
+                "Using the C++ programming language, code a script that will take in a number as an input, then determine whether it is even or add.",
+              resources: [
+                {
+                  title: "C++ Program to Check Whether Number is Even or Odd",
+                  description:
+                    "What do you need to do to see if a number is even or odd?",
+                  href: "https://www.scaler.com/topics/even-odd-program-in-cpp/",
+                },
+              ],
+              points: 5,
+              group: {
+                discriminator: "level",
+                value: "2",
+              },
+              submission: {
+                title: "How to submit",
+                type: "manual",
+                description:
+                  'Please email your submission to Isaac Young at <a href="mailto:young9191@student.lsmsa.edu">young9191@student.lsmsa.edu</a>',
+              },
+            },
+            {
+              id: "taf7c29",
+              name: "Guessing what?",
+              description:
+                "Using the C++ programming language, code a more guessing game! The game should secretely generate a random number, 1 to 100, and gives the user 10 attempts to try and guess it. For each guess, it should tell the user if they were too high or too low.",
+              // resources: [
+              //   {
+              //     title: "YouTube Video: Python in 10 minutes",
+              //     description: "You only need up to the 7:00 mark for now",
+              //     href: "https://youtu.be/fWjsdhR3z3c",
+              //   },
+              // ],
+              points: 10,
+              group: {
+                discriminator: "level",
+                value: "3",
+              },
+              submission: {
+                title: "How to submit",
+                type: "manual",
+                description:
+                  'Please email your submission to Isaac Young at <a href="mailto:young9191@student.lsmsa.edu">young9191@student.lsmsa.edu</a>',
+              },
+            },
+          ],
+        },
+        {
           id: "c61d0a7",
           name: "Coding together",
           description: "Learn how to use GitHub.",
