@@ -5,7 +5,7 @@ let validModes = ["auto"].concat(validSchemes);
 let colorScheme;
 let schemeMode;
 schemeMode = window.localStorage.getItem("schemeMode");
-if (!schemeMode) schemeMode = "auto";
+if (!schemeMode) schemeMode = "dark"; // Default scheme
 
 if (window.matchMedia) {
   window
@@ -15,6 +15,20 @@ if (window.matchMedia) {
         refreshColorScheme();
       }
     });
+}
+
+// ---
+
+function setupColorScheme() {
+  document.querySelectorAll("#color-scheme-switcher").forEach((element) => {
+    element.addEventListener("click", cycleColorMode);
+  });
+  refreshColorScheme();
+  setTimeout(() => {
+    document.querySelectorAll(".stop-transitions").forEach((element) => {
+      element.classList.remove("stop-transitions");
+    });
+  }, 10);
 }
 
 function refreshColorScheme() {

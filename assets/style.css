@@ -61,6 +61,12 @@ figure {
   padding: 0;
 }
 
+/* --- */
+
+.stop-transitions * {
+  transition: none !important;
+}
+
 /* --- INNER DIV CLASS --- */
 
 .inner {
