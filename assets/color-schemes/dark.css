@@ -1,4 +1,5 @@
 :root {
+  --accent: var(--thm-d-accent);
   --background-primary: var(--thm-d-background-primary);
   --background-secondary: var(--thm-d-background-secondary);
   --background-tertiary: var(--thm-d-background-tertiary);
@@ -14,11 +15,3 @@
   --modal-backdrop: var(--thm-d-modal-backdrop);
   --shadow: var(--thm-d-shadow);
 }
-
-/* .color-scheme-icon-light {
-  display: none;
-} */
-/* .color-scheme-icon-dark {
-  display: block !important;
-  display: "";
-} */
