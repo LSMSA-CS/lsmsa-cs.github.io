@@ -530,7 +530,7 @@ section#about {
 
 .goals > li,
 .goals > li > a {
-  flex: 1 0 224px;
+  flex: 1 0;
 
   padding: 16px;
 
