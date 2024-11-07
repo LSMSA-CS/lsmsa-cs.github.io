@@ -342,6 +342,10 @@ section#hero {
 
 section#projects {
   background-color: var(--background-secondary);
+  box-shadow: 0 0 16px var(--shadow);
+
+  position: relative;
+  z-index: 1;
 }
 
 .project-list {
@@ -698,8 +702,13 @@ h3.officer-subtitle {
 .officer-bio {
   padding: 8px 12px 12px;
 
-  font-size: 10pt;
   color: var(--text-primary);
+
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-feature-settings: "liga" 1, "calt" 1;
+  line-height: 1.5;
+  font-size: 10pt;
 }
 
 /* --- OFFICER LINKS --- */
