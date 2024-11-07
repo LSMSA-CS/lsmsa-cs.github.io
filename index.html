@@ -9,29 +9,153 @@
     />
 
     <link rel="stylesheet" href="/assets/style.css" />
-    <link rel="stylesheet" href="/assets/cover.css" />
+    <!-- <link rel="stylesheet" href="/assets/cover.css" /> -->
+    <link rel="stylesheet" href="/assets/index.css" />
+
+    <link
+      class="color-scheme"
+      id="color-scheme-light"
+      rel="stylesheet"
+      href="scavenger-hunt/assets/color-schemes/light.css"
+      disabled
+    />
+    <link
+      class="color-scheme"
+      id="color-scheme-dark"
+      rel="stylesheet"
+      href="scavenger-hunt/assets/color-schemes/dark.css"
+    />
+    <script src="scavenger-hunt/assets/modules/colorScheme.js"></script>
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
-  <body>
+  <body class="stop-transitions">
+    <!-- <nav>
+      <div class="inner"></div>
+    </nav> -->
+    <div class="banner">
+      <span>You may be looking for the </span
+      ><a href="scavenger-hunt/">Scavenger Hunt</a>
+    </div>
     <main>
-      <a href="/" class="none">
-        <img
-          src="assets/cs-logo/transparent path.svg"
-          alt="Computer Science Club logo"
-          id="cs-logo"
-          draggable="false"
-        />
-      </a>
-      <hr />
-      <div>
-        <h1>CS @ LSMSA</h1>
-        <span>You may be looking for the</span>
-        <a href="scavenger-hunt/">Scavenger Hunt</a>
-      </div>
+      <section id="hero">
+        <div class="inner">
+          <div class="title">
+            <!-- <a href="/" class="none"> -->
+            <img
+              src="assets/cs-logo/transparent path.svg"
+              alt="Computer Science Club logo"
+              id="cs-logo"
+              draggable="false"
+            />
+            <!-- </a> -->
+            <hr />
+            <ul class="sidebar">
+              <li>
+                <a href="#hero">CS @ LSMSA 2025</a>
+              </li>
+              <li>
+                <a href="#projects">Projects</a>
+              </li>
+              <li>
+                <a href="#officers">Officers</a>
+              </li>
+            </ul>
+          </div>
+          <div class="hero-image">
+            <div class="gradient"></div>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <div class="inner">
+          <h1>Projects</h1>
+          <ul class="project-list">
+            <li>
+              <a href="scavenger-hunt/">
+                <h2 class="project-label">Computer Science Scavenger Hunt</h2>
+                <h3 class="project-subtitle">Explore Computer Science!</h3>
+                <div class="project-image">
+                  <img
+                    src="assets/hero-slides/Scavenger Hunt.png"
+                    alt="Screenshot of Scavenger Hunt page"
+                  />
+                </div>
+              </a>
+            </li>
+            <li>
+              <!-- <a href=""> -->
+              <h2 class="project-label">Upcoming projects</h2>
+              <h3 class="project-subtitle">Coming soon!</h3>
+              <!-- </a> -->
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="officers">
+        <div class="inner">
+          <h1>Officers</h1>
+          <ul class="officers-list">
+            <li>
+              <div class="officer-image">
+                <img src="assets/officers/Isaac.jpg" alt="" />
+              </div>
+              <h2 class="officer-name">Isaac Young</h2>
+              <h3 class="officer-subtitle">President • Class of 2025</h3>
+              <div class="officer-bio">
+                Isaac is a 2.5 year senior at LSMSA. He enjoys procrastinating
+                by building this website using no frameworks, packages, or
+                bundlers.
+              </div>
+              <ul class="officer-links">
+                <li>
+                  <a href="https://github.com/Isoscelestial">GitHub</a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@isoscelestial">YouTube</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h2 class="officer-name">Amelia Willis</h2>
+              <h3 class="officer-subtitle">Vice President • Class of 2026</h3>
+            </li>
+            <li>
+              <h2 class="officer-name">Joshua Cleveland</h2>
+              <h3 class="officer-subtitle">Secretary • Class of 2025</h3>
+            </li>
+            <li>
+              <h2 class="officer-name">Jacob Hypes</h2>
+              <h3 class="officer-subtitle">
+                Secretary of the Treasury • Class of 2025
+              </h3>
+            </li>
+            <li>
+              <h2 class="officer-name">Peter Yu</h2>
+              <h3 class="officer-subtitle">Secretary of War • Class of 2025</h3>
+            </li>
+            <li>
+              <h2 class="officer-name">Rocky Wright</h2>
+              <h3 class="officer-subtitle">
+                Secretary of Defense • Class of 2025
+              </h3>
+            </li>
+            <li>
+              <h2 class="officer-name">Sanjeetha Peters</h2>
+              <h3 class="officer-subtitle">
+                Club Sponsor • Senior Lecturer of Mathematics and Computer
+                Science
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- <section style="height: 256px; background-color: #333"></section> -->
     </main>
     <footer>
       <hr />
@@ -39,8 +163,27 @@
         <a href="https://www.instagram.com/lsmsa.cs/">Instagram</a>
         <a href="https://github.com/LSMSA-CS/">GitHub</a>
         <a href="https://github.com/LSMSA-CS/lsmsa-cs.github.io/">Repository</a>
+        <button id="color-scheme-switcher">
+          <div id="color-scheme-switcher-icon">
+            <i class="color-scheme-icon-auto" data-lucide="sun-moon"></i>
+            <i class="color-scheme-icon-dark" data-lucide="moon"></i>
+            <i class="color-scheme-icon-light" data-lucide="sun"></i>
+          </div>
+        </button>
       </div>
     </footer>
-    <script src="" async defer></script>
+    <!-- <script src="" async defer></script> -->
+    <script>
+      lucide.createIcons();
+      document.querySelectorAll("#color-scheme-switcher").forEach((element) => {
+        element.addEventListener("click", cycleColorMode);
+      });
+      refreshColorScheme();
+      setTimeout(() => {
+        document.querySelectorAll(".stop-transitions").forEach((element) => {
+          element.classList.remove("stop-transitions");
+        });
+      }, 10);
+    </script>
   </body>
 </html>
