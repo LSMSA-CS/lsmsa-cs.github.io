@@ -3,16 +3,17 @@ export let hunt = {
     id: "hdc9fdb",
     title: "Computer Science Scavenger Hunt",
     description:
-      "Explore the various fields of Computer Science by completing these tasks! More cards and tasks will be added in the future.\nThe current deadline for this event is November 16, 2024. If you are a club officer, you need to submit at least one task!",
+      "Explore the various fields of Computer Science by completing these tasks! More cards and tasks will be added in the future.\nFirst place wins a home cooked meal! Other podium positions will get something similarly delicious.\n\nThe current deadline for this event is November 16, 2024. If you are a club officer, you should submit at least one task!",
     author: {
       id: "u000001",
-      name: "Isosc",
-      descriptor: "Senior",
+      name: "Isaac Young",
+      descriptor: "Senior • @isoscelestial",
       type: "individual",
       profileUUID: "0d19deb1-1e50-4bd5-b2b5-cd6423595bdb",
+      link: "https://github.com/Isoscelestial",
     },
-    version: 1.1,
-    timeLastUpdated: 1728342000,
+    version: 1.2,
+    timeLastUpdated: 1730937600,
     timeReleased: 1726816980,
     timeDue: 1731823199,
   },
@@ -323,7 +324,8 @@ export let hunt = {
         {
           id: "c5f1029",
           name: "Sea of C++",
-          description: "Use the C++ programming language to make some advanced scripts.",
+          description:
+            "Use the C++ programming language to make some advanced scripts.",
           icon: "code",
           skills: ["Coding"],
           tasks: [
@@ -331,11 +333,10 @@ export let hunt = {
               id: "t378fba",
               name: "Hello World!",
               description:
-                'Using the C++ programming language, write a Hello World program. If you\'re on a school laptop, install Dev-C++ from the Company Portal app',
+                "Using the C++ programming language, write a Hello World program. If you're on a school laptop, install Dev-C++ from the Company Portal app",
               resources: [
                 {
-                  title:
-                    "C++ \"Hello, World!\" Program",
+                  title: 'C++ "Hello, World!" Program',
                   description: "You can just copy the steps from the video",
                   href: "https://www.programiz.com/cpp-programming/examples/print-sentence",
                 },

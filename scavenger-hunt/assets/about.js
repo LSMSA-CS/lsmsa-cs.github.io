@@ -18,6 +18,9 @@ function updateAuthor() {
     document.querySelector(".scahoo-about-author-descriptor").innerText =
       hunt.info.author.descriptor;
   }
+  if (hunt.info.author.link) {
+    document.querySelector(".scahoo-about-author-item").setAttribute("href", hunt.info.author.link);
+  }
 }
 
 function updateDetails() {

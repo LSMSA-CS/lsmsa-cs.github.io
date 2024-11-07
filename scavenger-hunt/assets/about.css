@@ -174,7 +174,12 @@
   transition: background-color 0.15s;
 }
 
+.scahoo-about-author-item:link {
+  text-decoration: none;
+}
+
 .scahoo-about-author-item:hover {
+  color: var(--text-primary);
   background-color: var(--background-secondary-hover);
 }
 
